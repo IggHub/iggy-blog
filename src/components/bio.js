@@ -11,7 +11,7 @@ import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
 
-function Bio() {
+const Bio = () => {
   return (
     <StaticQuery
       query={bioQuery}

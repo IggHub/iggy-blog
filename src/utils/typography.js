@@ -15,6 +15,7 @@ const typography = new Typography(Wordpress2016)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
+  /* instanbul ignore next */ 
   typography.injectStyles()
 }
 
