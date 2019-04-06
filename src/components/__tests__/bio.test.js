@@ -8,7 +8,7 @@ beforeEach(() => {
     render({
       avatar: {
         childImageSharp: {
-          fixed: "whatever",
+          fixed: {},
         },
       },
       site: {
