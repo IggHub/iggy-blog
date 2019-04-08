@@ -1,6 +1,7 @@
 import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
 
+/* istanbul ignore file */
 Wordpress2016.overrideThemeStyles = () => {
   return {
     "a.gatsby-resp-image-link": {
@@ -15,7 +16,6 @@ const typography = new Typography(Wordpress2016)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
-  /* instanbul ignore next */ 
   typography.injectStyles()
 }
 
