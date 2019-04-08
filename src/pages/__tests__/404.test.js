@@ -1,7 +1,7 @@
 import React from "react"
-import renderer from "react-test-renderer"
+import ShallowRenderer from "react-test-renderer/shallow"
 import NotFoundPage from "../404"
-
+import * as gatsby from "gatsby"
 import {
   render,
   fireEvent,
@@ -9,8 +9,10 @@ import {
   waitForElement,
 } from "react-testing-library"
 import "jest-dom/extend-expect"
+import { useStaticQuery } from "gatsby"
+import SEO from "../../components/seo"
 
-afterEach(cleanup)
+beforeEach(cleanup)
 
 describe("NotFoundPage", () => {
   it("loads and displays greeting", async () => {
@@ -24,13 +26,15 @@ describe("NotFoundPage", () => {
     const locationProps = {
       pathname: "/wrong-path",
     }
-    const { getByText, getByTestId, container, asFragment } = render(
-      <NotFoundPage data={dataProps} location={locationProps} />
-    )
 
-    expect(getByText("Not Found")).toBeTruthy()
-    // Arrange
-    // Act
-    // Assert
+    const renderer = new ShallowRenderer()
+    renderer.render(<NotFoundPage data={dataProps} location={locationProps} />)
+    const result = renderer.getRenderOutput()
+
+    expect(result.props.children).toEqual([
+      <SEO title="404: Not Found" />,
+      <h1>Not Found</h1>,
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>,
+    ])
   })
 })

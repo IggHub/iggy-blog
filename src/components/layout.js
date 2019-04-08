@@ -10,7 +10,6 @@ class Layout extends React.Component {
 
     let header
 
-    console.log("location: ", location)
     if (location.pathname === rootPath) {
       header = (
         <h1
