@@ -63,7 +63,7 @@ exports[`Bio renders correctly 1`] = `
     <a
       href="https://twitter.com/someTwitterHandle"
     >
-      You should follow him on Twitter
+      Everybody should totally follow him on twitter.
     </a>
   </p>
 </div>
