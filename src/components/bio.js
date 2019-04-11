@@ -42,7 +42,7 @@ const Bio = () => {
               Dallas. I write about useful things I found on internet.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+                Everybody should totally follow him on twitter.
               </a>
             </p>
           </div>
