@@ -49,3 +49,4 @@ Testing implementation detail can lead to false positives/ negatives. For exampl
 When testing frontend, do not get bogged down by private/ unnecessary details. Since frontend is customer facing, it's helpful to keep the perspective of customer the whole time - would this affect User Experience? If the question is no, we should use discernment before rushing to write it for the sake of getting that coverage up to `99.0%`. 
 
 Call it __user-centric testing mindset__.
+
